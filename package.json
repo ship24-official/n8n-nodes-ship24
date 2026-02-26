@@ -1,19 +1,24 @@
 {
-	"name": "n8n-nodes-<...>",
-	"version": "0.1.0",
-	"description": "",
+	"name": "n8n-nodes-ship24",
+	"version": "1.0.0",
+	"description": "Ship24 integration for n8n (shipment tracking API).",
 	"license": "MIT",
-	"homepage": "",
+	"homepage": "https://github.com/ship24-official/n8n-nodes-ship24#readme",
 	"keywords": [
-		"n8n-community-node-package"
+		"n8n-community-node-package",
+		"n8n",
+		"ship24",
+		"tracking",
+		"shipment-tracking",
+		"logistics"
 	],
 	"author": {
-		"name": "",
-		"email": ""
+		"name": "Ship24",
+		"email": "contact@ship24.com"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/<...>/n8n-nodes-<...>.git"
+		"url": "https://github.com/ship24-official/n8n-nodes-ship24.git"
 	},
 	"scripts": {
 		"build": "n8n-node build",
@@ -29,18 +34,16 @@
 	],
 	"n8n": {
 		"n8nNodesApiVersion": 1,
-		"strict": true,
 		"credentials": [
-			"dist/credentials/GithubIssuesApi.credentials.js",
-			"dist/credentials/GithubIssuesOAuth2Api.credentials.js"
+			"dist/credentials/Ship24Api.credentials.js"
 		],
 		"nodes": [
-			"dist/nodes/GithubIssues/GithubIssues.node.js",
-			"dist/nodes/Example/Example.node.js"
+			"dist/nodes/Ship24.node.js"
 		]
 	},
 	"devDependencies": {
 		"@n8n/node-cli": "*",
+		"@types/node": "^25.3.0",
 		"eslint": "9.32.0",
 		"prettier": "3.6.2",
 		"release-it": "^19.0.4",
